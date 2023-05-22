@@ -1,9 +1,27 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./menu/Footer";
+import NavBar from "./menu/NavBar";
+import Dashboard from "./pages/Dashboard";
+import EmployeeList from "./pages/EmployeeList";
 
 function App(){
+
+
+
+
   return (
-    <div >
-      <h1>Hello World!</h1>
-    </div>
+    < >
+    <BrowserRouter>
+    <NavBar></NavBar>
+      <Routes>
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/employee-list" element={<EmployeeList/>} />
+
+      </Routes>
+      <Footer></Footer>
+    </BrowserRouter>
+  
+    </>
   );
 }
 
